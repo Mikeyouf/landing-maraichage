@@ -72,7 +72,12 @@ const Contact = ({ data }) => {
               <Icon icon="building" />
               <StyledFormContainer>
                 <StyledForm>Adresse</StyledForm>
-                <span>{address}</span>
+                <a
+                  href="https://goo.gl/maps/Gi2vN6qLPYZiQdnV6"
+                  style={{ color: '#ced8de', fontSize: '0.75rem', fontWeight: '500' }}
+                >
+                  <span>{address}</span>
+                </a>
               </StyledFormContainer>
             </StyledContainer>
           )}
