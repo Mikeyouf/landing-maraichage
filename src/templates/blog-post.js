@@ -36,17 +36,23 @@ const StyledBlogText = styled.div`
 `;
 
 const BlogPost = ({ data }) => {
-  const readingTime = data.markdownRemark.fields.readingTime.text;
+  // arrondi le nombre à l'entier le plus proche. Nbr de mots divisé par 200
+  const readingTime = Math.round(data.markdownRemark.fields.readingTime.words / 200);
+  // console.log(readingTime);
   const post = data.markdownRemark;
   const coverImage = post.frontmatter.cover_image ? post.frontmatter.cover_image.childImageSharp.fluid : null;
   const { tags = [], title, date } = post.frontmatter;
+  // console.log(date);
 
   return (
     <Layout menuLinks={blogMenuLinks}>
       <StyledBlogSection>
         <StyledBlogTitle>{title}</StyledBlogTitle>
         <StyledDate>
-          Publié le {date} / <span>{readingTime}</span>
+          Publié le {date} /{' '}
+          <span>
+            {readingTime < 1 ? 1 : readingTime} minute{readingTime < 1 ? '' : 's'} de lecture
+          </span>
         </StyledDate>
         <TagList tags={tags} />
         {coverImage && <Img fluid={coverImage} />}
@@ -69,7 +75,7 @@ export const query = graphql`
       frontmatter {
         title
         tags
-        date(formatString: "D. MMMM YYYY")
+        date(formatString: "DD MMMM YYYY", locale: "fr")
         cover_image {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -82,6 +88,7 @@ export const query = graphql`
         readingTime {
           text
           minutes
+          words
         }
       }
     }

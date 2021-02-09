@@ -58,7 +58,7 @@ const Blog = ({ data }) => {
               key={node.frontmatter.title}
               coverImage={coverImage}
               title={node.frontmatter.title}
-              date={node.frontmatter.date}
+              date={node.frontmatter.date.toLocaleDateString()}
               description={node.frontmatter.description}
               link={`/blog${node.fields.slug}`}
               tags={node.frontmatter.tags}

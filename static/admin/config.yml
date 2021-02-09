@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: Mikeyouf/landing-maraichage
+  branch: main
+  commit_messages:
+    create: 'Creation de {{collection}} “{{slug}}”'
+    update: 'Mise à jour de {{collection}} “{{slug}}”'
+    delete: 'Mit à la corbeille: {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] mit à jour “{{path}}”'
+    deleteMedia: '[skip ci] effacé “{{path}}”'
+
+# Uncomment local_backend when you need to develop in your local
+#local_backend: true # run npx netlify-cms-proxy-server for local testing
+
+media_folder: 'static/assets'
+public_folder: '/assets'
+
+collections:
+  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Posts' # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: "New Post"
+    description: >
+      Crée tes articles ici
+    folder: 'content/posts'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post' }
+      - { label: 'Titre', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Tags', name: 'tags', widget: 'array' }
+      - { label: 'Publier', name: 'published', widget: 'boolean' }
+      - {
+          label: "Nom de l'url",
+          name: 'slug',
+          widget: 'string',
+          hint: 'TOUJOURS commencer avec /. Utiliser uniquement des caractères alpha-numérique, - et _. AUCUN espace entre les lettres ou mots.',
+        }
+      - {
+          label: 'Date de publication',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false, tagname: '' }
+
+      - { label: 'Article', name: 'body', widget: 'markdown', hint: "Le principal de l'article se trouve ici." }

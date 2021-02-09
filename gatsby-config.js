@@ -1,15 +1,19 @@
 module.exports = {
-    pathPrefix: '/gatsby-starter-level-2',
+    // flags: {
+    //     PRESERVE_WEBPACK_CACHE: true
+    // },
+    pathPrefix: '/fdg-maraichage',
     siteMetadata: {
         title: 'Ferme du Gapeau',
         titleTemplate: '%s · FDG',
         image: '/images/logo.png',
         author: 'La Ferme du Gapeau',
         description: 'Vente de légumes naturels cultivé par nos ouvriers en situation de handicap.',
-        url: 'https://knochenmark.github.io',
+        url: 'https://fdg-maraichage.netlify.app',
         paginationPageSize: 4, // Amount of posts displayed per listing page.
     },
     plugins: [
+        'gatsby-plugin-netlify-cms',
         `gatsby-plugin-stylus`,
         `gatsby-plugin-react-helmet`,
         {
