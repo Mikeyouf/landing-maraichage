@@ -21,14 +21,14 @@ const StyledTagsH1 = styled(StyledH1)`
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagHeader = `A collection of ${totalCount} post${totalCount === 1 ? '' : 's'}`;
+  const tagHeader = `Une collection de ${totalCount} article${totalCount === 1 ? '' : 's'}`;
 
   return (
     <Layout menuLinks={blogMenuLinks}>
       <StyledFullHeightSection>
         <StyledTagsH1>{tag}</StyledTagsH1>
         <StyledTagsLinkContainer>
-          <TextLink label="View All Tags" link="/tags" />
+          <TextLink label="Voir tous les tags" link="/tags" />
         </StyledTagsLinkContainer>
         <StyledH2>{tagHeader}</StyledH2>
         <ul>

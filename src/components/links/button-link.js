@@ -6,8 +6,8 @@ import { flexCenter } from './../_shared/styled-mixins';
 export const StyledButtonLink = styled.a`
   ${flexCenter};
   text-decoration: none;
-  color: var(--bg-content-color) !important;
-  background-color: var(--title-color);
+  color: var(--title-color) !important;
+  background-color: var(--primary-color);
   font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
@@ -17,6 +17,7 @@ export const StyledButtonLink = styled.a`
 
   &:hover {
     color: var(--primary-color) !important;
+    background-color: var(--bg-content-color);
   }
 
   &:after {
@@ -54,7 +55,7 @@ const ButtonLink = ({ label, link }) => {
       {label && link && (
         <StyledButtonLink href={link ? link : '#'} target="_blank" rel="noopener">
           {label}
-          <Icon icon="arrow-right" />
+          <Icon icon="arrow-down" />
         </StyledButtonLink>
       )}
     </React.Fragment>

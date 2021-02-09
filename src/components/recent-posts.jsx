@@ -80,14 +80,14 @@ const RecentPosts = ({ data }) => {
 
     const link = `/blog` + post.node.fields.slug;
 
-    const month = new Date(date).toLocaleDateString('en-EN', { month: 'short' });
-    const day = new Date(date).toLocaleDateString('en-EN', { day: '2-digit' });
+    const month = new Date(date).toLocaleDateString('fr-FR', { month: 'short' });
+    const day = new Date(date).toLocaleDateString('fr-FR', { day: '2-digit' });
 
     return (
       <StyledPostContainer key={title}>
         <StyledDateOverlay>
-          <span>{month}</span>
           <span>{day}</span>
+          <span>{month}</span>
         </StyledDateOverlay>
         <Link to={link} aria-label={`recent post ${title}`}>
           <StyledImageContainer>{coverImage && <Img fluid={coverImage} />}</StyledImageContainer>
@@ -105,10 +105,10 @@ const RecentPosts = ({ data }) => {
 
   return (
     <StyledSection id="blog">
-      <StyledH1>Latest Blog Posts</StyledH1>
+      <StyledH1>Derniers articles de blog</StyledH1>
       <StyledPostsContainer>{recentPosts}</StyledPostsContainer>
       <StyledBlogLinkContainer>
-        <TextLink label="View All Posts" link="/blog" />
+        <TextLink label="Voir tous les articles" link="/blog" />
       </StyledBlogLinkContainer>
     </StyledSection>
   );

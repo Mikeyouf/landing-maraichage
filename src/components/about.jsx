@@ -6,6 +6,7 @@ import { mq } from './_shared/media';
 import { StyledH1, StyledH2 } from './_shared/styled-headings';
 import { StyledStaticImageContainer } from './_shared/styled-image-container';
 import { StyledSection } from './_shared/styled-section';
+// import Maraichage from '../../content/sections/about/terrasse-1.jpg';
 
 const StyledAboutContainer = styled.article`
   display: grid;
@@ -19,31 +20,46 @@ const StyledAboutContainer = styled.article`
 `;
 const StyledTextSection = styled.section`
   white-space: pre-line;
+  font-size: 0.9rem;
+  text-align: justify;
+  p {
+    margin-bottom: 0;
+  }
+  margin-bottom: 0;
 `;
 
 const About = ({ data }) => {
   const {
-    frontmatter: { title, techs, about_image },
+    frontmatter: { title, techs, aboutimage },
     html,
   } = data;
 
-  const image = about_image ? about_image.childImageSharp.fluid : null;
+  // console.log(aboutimage);
+
+  const image = aboutimage ? aboutimage.childImageSharp.fluid : null;
 
   return (
-    <StyledSection id="about">
-      <StyledH1>About Me</StyledH1>
+    <StyledSection id="a-propos">
+      <StyledH1> Un peu d'histoire </StyledH1>{' '}
       <StyledAboutContainer>
+        {' '}
         {image && (
           <StyledStaticImageContainer>
             <Img fluid={image} objectFit="contain" />
+            {/* <img src={Maraichage} alt="maraichage" /> */}
+            {/* {image !== null ? <Img fluid={image} objectFit="contain" /> : <img src={Maraichage} alt="maraichage" />} */}
           </StyledStaticImageContainer>
-        )}
+        )}{' '}
         <div>
-          <StyledH2>{title}</StyledH2>
-          <StyledTextSection dangerouslySetInnerHTML={{ __html: html }} />
-          <TechList techs={techs} />
-        </div>
-      </StyledAboutContainer>
+          <StyledH2> {title} </StyledH2>{' '}
+          <StyledTextSection
+            dangerouslySetInnerHTML={{
+              __html: html,
+            }}
+          />{' '}
+          <TechList techs={techs} />{' '}
+        </div>{' '}
+      </StyledAboutContainer>{' '}
     </StyledSection>
   );
 };

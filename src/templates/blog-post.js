@@ -46,7 +46,7 @@ const BlogPost = ({ data }) => {
       <StyledBlogSection>
         <StyledBlogTitle>{title}</StyledBlogTitle>
         <StyledDate>
-          Posted {date}. <span>{readingTime}.</span>
+          Publié le {date} / <span>{readingTime}</span>
         </StyledDate>
         <TagList tags={tags} />
         {coverImage && <Img fluid={coverImage} />}
@@ -81,6 +81,7 @@ export const query = graphql`
       fields {
         readingTime {
           text
+          minutes
         }
       }
     }

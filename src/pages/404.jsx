@@ -37,12 +37,12 @@ const NotFoundPage = () => (
   <Layout menuLinks={blogMenuLinks}>
     <Styled404Section>
       <SEO title="404: Not found" />
-      <StyledIntroduction>Oops!...It happened again</StyledIntroduction>
+      <StyledIntroduction>Oops!...Il semblerait qu'il n'y ai rien ici</StyledIntroduction>
       <Styled404Text>
         4<SmileyDead />4
       </Styled404Text>
-      <StyledDescription>Sorry, we couldn't find the page you were looking for.</StyledDescription>
-      <TextLink label="Take me home" link="/" />
+      <StyledDescription>Désolé, mais rien ne pousse ici ^_^</StyledDescription>
+      <TextLink label="Ramenez moi dans le droit chemin" link="/" />
     </Styled404Section>
   </Layout>
 );

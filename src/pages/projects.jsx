@@ -19,12 +19,11 @@ const Projects = ({
 }) => {
   return (
     <Layout menuLinks={blogMenuLinks}>
-      <SEO title="Projects" />
+      <SEO title="Projets" />
       <StyledFullHeightSection>
-        <StyledProjectsH1>Projects</StyledProjectsH1>
-        <StyledSeparator />
-        <ProjectList projects={nodes} />
-      </StyledFullHeightSection>
+        <StyledProjectsH1> Projects </StyledProjectsH1> <StyledSeparator />
+        <ProjectList projects={nodes} />{' '}
+      </StyledFullHeightSection>{' '}
     </Layout>
   );
 };

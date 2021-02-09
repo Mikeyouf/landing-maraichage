@@ -30,8 +30,7 @@ const Layout = ({ children, menuLinks }) => {
   const { author } = data.site.siteMetadata;
   return (
     <React.Fragment>
-      <Header menuLinks={menuLinks} />
-      <main>{children}</main>
+      <Header menuLinks={menuLinks} /> <main>{children}</main>
       <Footer author={author} />
       <NavigationBar menuLinks={menuLinks} />
       <ScrollToTop />

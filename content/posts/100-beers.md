@@ -1,11 +1,11 @@
 ---
-date: 2020-05-31
-title: '100 Beers you must try'
-tags: ['Drinks', 'Beer', 'Craft']
+date: 2021-02-08
+title: 'La culture en lasagne'
+tags: ['culture', 'légumes', 'lasagne', 'naturel']
 published: true
 cover_image: ./images/beer.jpg
 canonical_url: false
-description: 'Here is my personal list for the 100 beers you should try! At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.'
+description: 'Au maraîchage de La Ferme du Gapeau, une partie de nos champs ont été transformé en "lasagnes". Un type de culture sur butte qui donne de très bons résultats.'
 ---
 
 # Beers

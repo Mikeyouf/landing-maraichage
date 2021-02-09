@@ -44,22 +44,19 @@ const StyledFactNumber = styled.section`
 
 const Facts = () => {
   return (
-    <StyledSkewedSection angle={10}>
-      <StyledH1>Some Interesting Facts</StyledH1>
+    <StyledSkewedSection angle={0}>
+      <StyledH1> Le maraichage en quelques chiffres </StyledH1>{' '}
       <StyledLogoSection>
         <StyledFactNumber>
-          <span className="number">127</span>
-          <span className="fact">Finished Projects</span>
-        </StyledFactNumber>
+          <span className="number"> 1,2 Ha </span> <span className="fact"> De culture </span>{' '}
+        </StyledFactNumber>{' '}
         <StyledFactNumber>
-          <span className="number">321</span>
-          <span className="fact">Happy Customers</span>
-        </StyledFactNumber>
+          <span className="number"> 14 </span> <span className="fact"> Ouvriers </span>{' '}
+        </StyledFactNumber>{' '}
         <StyledFactNumber>
-          <span className="number">863</span>
-          <span className="fact">Freelancing Hours</span>
-        </StyledFactNumber>
-      </StyledLogoSection>
+          <span className="number"> +300 </span> <span className="fact"> Clients satisfaits </span>{' '}
+        </StyledFactNumber>{' '}
+      </StyledLogoSection>{' '}
     </StyledSkewedSection>
   );
 };

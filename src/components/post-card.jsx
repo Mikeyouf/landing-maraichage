@@ -83,12 +83,12 @@ const PostCard = ({ title, date, description, link, coverImage, tags }) => {
       <Link to={link}>
         <StyledContent>
           <StyledTitle>{title}</StyledTitle>
-          <StyledPublishingDate>published on {date}</StyledPublishingDate>
+          <StyledPublishingDate>publié le {date}</StyledPublishingDate>
           <StyledDescription>{description}</StyledDescription>
         </StyledContent>
       </Link>
       <StyledReadMoreLink to={link}>
-        <span>Read more</span>
+        <span>Lire plus</span>
       </StyledReadMoreLink>
     </StyledPostCard>
   );

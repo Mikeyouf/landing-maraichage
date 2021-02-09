@@ -1,29 +1,29 @@
 ---
 cards:
-  - label: Markdown
-    icon: markdown
-    prefix: fab
-    description: All posts, projects and sections are editable via Markdown files.
-  - label: Customizable
-    icon: palette
+  - label: Humaniste
+    icon: user-alt
     prefix: fas
-    description: All theme colors and further properties are adjustable via Css Variables.
-  - label: Configurable
+    description: Nous croyons en l'humain et le mettons au centre de notre projet.
+  - label: Naturel
+    icon: leaf
+    prefix: fas
+    description: Travail de la terre en respectant la vie et notre environnement.
+  - label: Travail
     icon: cogs
     prefix: fas
-    description: Navigation and Social links can be easily adjusted via config objects.
-  - label: Projects
-    icon: terminal
+    description: Comme support à l'accompagnement de nos ouvriers en situation de handicap.
+  - label: Respect
+    icon: hands-helping
     prefix: fas
-    description: Display your most important projects in a dedicated section or list them on the projects sub page.
-  - label: Components
-    icon: react
-    prefix: fab
-    description: Plenty of reusable components, mixins and with Emotion styled components are waiting for you.
-  - label: Integrated Blog
-    icon: feather-alt
+    description: Des autres et de notre éco-système.
+  - label: Entraide
+    icon: people-carry
     prefix: fas
-    description: Everything you need to start your integrated blog is already in place. Just start writing!
+    description: L'un des pillier du travail en communauté.
+  - label: Responsable
+    icon: hand-holding-heart
+    prefix: fas
+    description: Démarche de production locale sans pesticide, toujours dans le respect de la nature.
 ---
 
-This Card-Grid component allows you to display predefined cards. You could use it like us and display features with it or you could also use it to display the services you provide for your customer. Go ahead and adjust the component to your own needs.
+Travailler la terre de manière naturelle a tout de suite été une évidence pour nous. Nos ouvriers sont sensible à cette démarche et ils travaillent dans le respect de notre écosystème, afin de produire de beaux légumes naturels gorgé de vitamines et d'énergie!

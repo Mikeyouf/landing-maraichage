@@ -4,9 +4,9 @@ import React from 'react';
 
 const skewNumber = 0.09719;
 const StyledSkewedSection = styled.section`
-  margin: 6rem 0;
+  margin: 0 0 6rem 0;
   position: relative;
-  padding: calc(100% * ${skewNumber}) 0;
+  padding: calc(80% * ${skewNumber}) 0;
 
   & > .content {
     max-width: 1000px;
@@ -26,8 +26,8 @@ const StyledSkewedSection = styled.section`
     right: 0;
     bottom: 0;
     z-index: -1;
-    transform: skewy(-11deg);
-    transform-origin: 50% 0;
+    /* transform: skewy(-6deg); */
+    /* transform-origin: 50% 0; */
     outline: 1px solid transparent;
     backface-visibility: hidden;
     background-color: var(--bg-content-color);
@@ -39,7 +39,7 @@ const StyledSkewedSection = styled.section`
 const SkewedSection = (props) => {
   return (
     <StyledSkewedSection>
-      <div className="content">{props.children}</div>
+      <div className="content"> {props.children} </div>
     </StyledSkewedSection>
   );
 };
@@ -49,7 +49,7 @@ SkewedSection.propTypes = {
 };
 
 SkewedSection.defaultProps = {
-  angle: 10,
+  angle: 5,
 };
 
 export default SkewedSection;

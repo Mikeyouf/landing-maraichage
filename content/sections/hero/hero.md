@@ -1,10 +1,8 @@
 ---
-introduction: "hey it's me"
-tagline: 'Design. Code. Experiment'
-cta_label: 'View Documentation'
-cta_link: 'https://github.com/Knochenmark/gatsby-starter-level-2/blob/master/README.md'
+introduction: Bienvenue à
+tagline: Cultiver la terre est une passion que l'on vit au quotidien
+cta_label: En savoir plus
+cta_link: /#a-propos
 ---
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore
-et dolore magna aliquyam erat, sed diam voluptua.
+« Nous n’héritons pas de la terre de nos ancêtres, nous l’empruntons à nos descendants.» Saint Exupéry

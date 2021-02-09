@@ -74,8 +74,9 @@ const Footer = ({ author }) => {
           <SocialIcons icons={socialIconList} />
         </StyledSocialContainer>
         <StyledRotatorContainer>
-          Made with
+          Fait avec
           <Rotator emojis={['☕', '🍕', '🍺', '🍜', '💖']} />
+          par Cré@gency'm
         </StyledRotatorContainer>
       </StyledFooterContainer>
     </StyledFooter>

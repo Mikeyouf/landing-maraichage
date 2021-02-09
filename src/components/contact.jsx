@@ -33,6 +33,7 @@ const StyledTextSection = styled.section`
   width: 100%;
   max-width: 500px;
   margin-left: 3px;
+  text-align: center;
 `;
 const StyledSeparator = styled.div`
   height: 1px;
@@ -63,7 +64,7 @@ const Contact = ({ data }) => {
   return (
     <React.Fragment>
       <StyledContactSection id="contact">
-        <StyledH1>Contact Details</StyledH1>
+        <StyledH1>Restons en contact</StyledH1>
         <StyledTextSection dangerouslySetInnerHTML={{ __html: html }} />
         <StyledSeparator />
         <StyledContacts>
@@ -71,7 +72,7 @@ const Contact = ({ data }) => {
             <StyledContainer>
               <Icon icon="building" />
               <StyledFormContainer>
-                <StyledForm>Office Location</StyledForm>
+                <StyledForm>Adresse</StyledForm>
                 <span>{address}</span>
               </StyledFormContainer>
             </StyledContainer>
@@ -80,7 +81,7 @@ const Contact = ({ data }) => {
             <StyledContainer>
               <Icon icon="paper-plane" />
               <StyledFormContainer>
-                <StyledForm>My E-Mail</StyledForm>
+                <StyledForm>E-Mail</StyledForm>
                 <span>{email}</span>
               </StyledFormContainer>
             </StyledContainer>
@@ -89,7 +90,7 @@ const Contact = ({ data }) => {
             <StyledContainer>
               <Icon icon="mobile-alt" />
               <StyledFormContainer>
-                <StyledForm>Phone Number</StyledForm>
+                <StyledForm>Téléphone</StyledForm>
                 <span>{phone}</span>
               </StyledFormContainer>
             </StyledContainer>

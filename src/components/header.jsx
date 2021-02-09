@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/logo-avath-maraichage.svg';
 import SocialIcons from './social-icons';
 import { socialIconList } from './_config/social-icon-list';
 import { mq } from './_shared/media';
@@ -25,13 +25,24 @@ const StyledContainer = styled.div`
 `;
 const StyledHomeLink = styled(Link)`
   text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+    color: white;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 `;
 const StyledLogo = styled(Logo)`
   width: var(--header-height);
   height: var(--header-height);
   fill: var(--title-color);
 
-  &:hover path.level-2 {
+  &:hover {
     fill: var(--primary-color);
   }
 `;
@@ -80,7 +91,7 @@ const Header = ({ menuLinks }) => (
   <StyledHeader>
     <StyledContainer>
       <StyledHomeLink title="logo" to="/">
-        <StyledLogo />
+        <StyledLogo /> <p>FDG</p>
       </StyledHomeLink>
       <StyledNav>
         {menuLinks.map((link, index) => (

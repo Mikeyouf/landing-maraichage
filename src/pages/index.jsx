@@ -1,16 +1,17 @@
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 import About from '../components/about';
 import CardGrid from '../components/card-grid';
 import Contact from '../components/contact';
-import FeaturedProjects from '../components/featured-projects';
+// import FeaturedProjects from '../components/featured-projects';
 import Hero from '../components/hero';
 import Facts from '../components/facts';
 import Layout from '../components/layout';
 import RecentPosts from '../components/recent-posts';
 import SEO from '../components/seo';
 import { indexMenuLinks } from '../components/_config/menu-links';
+import BgImage from '../components/BgImage';
 
 const Index = ({ data }) => {
   const heroData = {
@@ -22,23 +23,27 @@ const Index = ({ data }) => {
     ctaLink: data.hero.frontmatter.cta_link,
   };
 
+  // console.log(data.about);
+
   return (
     <Layout menuLinks={indexMenuLinks}>
-      <SEO title="Home" />
-      <Hero data={heroData} />
-      <Facts/>
-      <About data={data.about} />
-      <CardGrid cards={data.cards.frontmatter.cards} description={data.cards.html} title="Our Features" id="features" />
-      <FeaturedProjects featured={data.featuredProjects.nodes} />
+      <SEO title="Accueil" />
+      <BgImage title="maraichage" fluid={data.maraichage.childImageSharp.fluid} overlayColor="#04040454">
+        <Hero data={heroData} />
+      </BgImage>
+      <Facts />
+      <About data={data.about} />{' '}
+      <CardGrid cards={data.cards.frontmatter.cards} description={data.cards.html} title="Nos valeurs" id="features" />
+      {/* <FeaturedProjects featured={data.featuredProjects.nodes} /> */}
       <RecentPosts data={data.blog.edges} />
-      <Contact data={data.contact} />
+      <Contact data={data.contact} />{' '}
     </Layout>
   );
 };
 
-Index.propTypes = {
-  data: PropTypes.object.isRequired,
-};
+// Index.propTypes = {
+//   data: PropTypes.object.isRequired,
+// };
 
 export default Index;
 
@@ -64,7 +69,7 @@ export const query = graphql`
       frontmatter {
         title
         techs
-        about_image {
+        aboutimage {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
@@ -146,6 +151,14 @@ export const query = graphql`
         address
       }
       html
+    }
+
+    maraichage: file(relativePath: { eq: "maraichage.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `;
