@@ -58,7 +58,7 @@ const Blog = ({ data }) => {
               key={node.frontmatter.title}
               coverImage={coverImage}
               title={node.frontmatter.title}
-              date={node.frontmatter.date.toLocaleDateString()}
+              date={node.frontmatter.date}
               description={node.frontmatter.description}
               link={`/blog${node.fields.slug}`}
               tags={node.frontmatter.tags}
@@ -95,7 +95,7 @@ export const query = graphql`
           frontmatter {
             title
             tags
-            date(formatString: "D MMMM, YYYY")
+            date(formatString: "D MMMM, YYYY", locale: "fr")
             description
             cover_image {
               childImageSharp {
