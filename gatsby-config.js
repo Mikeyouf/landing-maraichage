@@ -6,7 +6,7 @@ module.exports = {
     siteMetadata: {
         title: 'Ferme du Gapeau',
         titleTemplate: '%s · FDG',
-        image: '/images/logo.png',
+        image: '/images/logo-avath-maraichage-black.png',
         author: 'La Ferme du Gapeau',
         description: 'Vente de légumes naturels cultivé par nos ouvriers en situation de handicap.',
         url: 'https://fdg-maraichage.netlify.app',
@@ -83,13 +83,13 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
+                name: `FDG - maraichage`,
                 short_name: `starter`,
                 start_url: `/`,
                 background_color: `#F1B631`,
                 theme_color: `#F1B631`,
                 display: `minimal-ui`,
-                icon: `src/images/logo.png`, // This path is relative to the root of the site.
+                icon: `src/images/logo-avath-maraichage-black.png`, // This path is relative to the root of the site.
             },
         },
         {
