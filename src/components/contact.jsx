@@ -25,7 +25,6 @@ const StyledFormContainer = styled.section`
 `;
 const StyledForm = styled.div`
   color: var(--primary-color);
-
   font-weight: normal;
 `;
 const StyledTextSection = styled.section`
@@ -81,8 +80,13 @@ const Contact = ({ data }) => {
             <StyledContainer>
               <Icon icon="paper-plane" />
               <StyledFormContainer>
-                <StyledForm>E-Mail</StyledForm>
-                <span>{email}</span>
+                <StyledForm>E-mail</StyledForm>
+                <a
+                  href="mailto:fermedugapeau.maraichage@avath.fr"
+                  style={{ color: '#ced8de', fontSize: '0.75rem', fontWeight: '500' }}
+                >
+                  <span>{email}</span>
+                </a>
               </StyledFormContainer>
             </StyledContainer>
           )}
@@ -91,7 +95,9 @@ const Contact = ({ data }) => {
               <Icon icon="mobile-alt" />
               <StyledFormContainer>
                 <StyledForm>Téléphone</StyledForm>
-                <span>{phone}</span>
+                <a href="tel:+33648588276" style={{ color: '#ced8de', fontSize: '0.75rem', fontWeight: '500' }}>
+                  <span>{phone}</span>
+                </a>
               </StyledFormContainer>
             </StyledContainer>
           )}

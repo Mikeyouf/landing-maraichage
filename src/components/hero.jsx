@@ -8,7 +8,7 @@ import { StyledSection } from './_shared/styled-section';
 // import Maraichage from '../images/maraichage.jpg';
 
 const StyledHeroSection = styled(StyledSection)`
-  min-height: calc(100vh - 2 * var(--header-height));
+  min-height: calc(100vh * var(--header-height));
   position: relative;
   text-align: center;
 
@@ -19,10 +19,15 @@ const StyledHeroSection = styled(StyledSection)`
 const StyledIntroduction = styled.div`
   color: var(--primary-color);
   font-weight: normal;
+  font-size: 15px;
+
+  ${mq.gt.sm} {
+    font-size: 17px;
+  }
 `;
 const StyledAuthor = styled.h1`
   margin-left: -4px !important;
-  font-size: 40px;
+  font-size: 22px;
   line-height: 1.1;
   margin: 0;
   word-break: break-word;
@@ -33,7 +38,7 @@ const StyledAuthor = styled.h1`
 `;
 const StyledTagline = styled.h2`
   margin-left: -4px !important;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.1;
   margin: 0;
   color: var(--primary-color);
@@ -45,8 +50,14 @@ const StyledTagline = styled.h2`
 `;
 const StyledDescription = styled.div`
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 100%;
   max-width: 500px;
+  font-size: 14px;
+
+  ${mq.gt.xs} {
+    font-size: 17px;
+  }
 `;
 
 const Hero = ({ data }) => {
