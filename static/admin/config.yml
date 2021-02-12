@@ -28,7 +28,7 @@ collections:
     fields: # The fields each document in this collection have
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post' }
       - { label: 'Titre', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Tags', name: 'tags', widget: 'array' }
+      - { label: 'Tags', name: 'tags', widget: 'list', hint: 'toujours séparer par une virgule' }
       - { label: 'Publier', name: 'published', widget: 'boolean' }
       - {
           label: "Nom de l'url",
@@ -48,3 +48,27 @@ collections:
       - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false, tagname: '' }
 
       - { label: 'Article', name: 'body', widget: 'markdown', hint: "Le principal de l'article se trouve ici." }
+
+  - name: 'legumes'
+    label: 'Légumes'
+    label_singular: 'Légume'
+    description: >
+      Ajoute ou supprime tes légumes ici
+    folder: 'content/projects'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    create: true
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Tags', name: 'techs', widget: 'list' }
+      - { label: 'Publier', name: 'featured', widget: 'boolean' }
+      - {
+          label: 'Date de publication',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false, tagname: '' }
+      - { label: 'Article', name: 'body', widget: 'markdown', hint: 'La description du légume se trouve ici.' }
