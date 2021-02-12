@@ -4,7 +4,7 @@ import React from 'react';
 import About from '../components/about';
 import CardGrid from '../components/card-grid';
 import Contact from '../components/contact';
-// import FeaturedProjects from '../components/featured-projects';
+import FeaturedProjects from '../components/featured-projects';
 import Hero from '../components/hero';
 import Facts from '../components/facts';
 import Layout from '../components/layout';
@@ -13,7 +13,7 @@ import SEO from '../components/seo';
 import { indexMenuLinks } from '../components/_config/menu-links';
 import BgImage from '../components/BgImage';
 
-const Index = ({ data }) => {
+const Index = ({ data, location }) => {
   const heroData = {
     author: data.site.siteMetadata.author,
     tagline: data.hero.frontmatter.tagline,
@@ -34,7 +34,7 @@ const Index = ({ data }) => {
       <Facts />
       <About data={data.about} />{' '}
       <CardGrid cards={data.cards.frontmatter.cards} description={data.cards.html} title="Nos valeurs" id="features" />
-      {/* <FeaturedProjects featured={data.featuredProjects.nodes} /> */}
+      <FeaturedProjects featured={data.featuredProjects.nodes} location={location} />
       <RecentPosts data={data.blog.edges} />
       <Contact data={data.contact} />{' '}
     </Layout>
@@ -149,6 +149,7 @@ export const query = graphql`
         phone
         email
         address
+        horaire
       }
       html
     }

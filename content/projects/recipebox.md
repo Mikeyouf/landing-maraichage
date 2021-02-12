@@ -1,11 +1,11 @@
 ---
 featured: true
 date: '2019-12-26'
-title: 'Recipebox'
+title: 'Poireau'
 cover_image: './images/notebook.jpg'
-repo_link: 'https://github.com/Knochenmark/recipebox'
-demo_link: 'https://knochenmark.github.io/recipebox/'
-techs: ['Typescript', 'React', 'Redux', 'Typestyle']
+repo_link: ''
+demo_link: ''
+techs: ['Légume', 'Hiver']
 ---
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+Le poireau cultivé est une espèce de plante herbacée vivace largement cultivée comme plante potagère pour ses feuilles consommées comme légumes. Issu de la domestication du poireau perpétuel et sélectionné pour son feuillage, il appartient à la famille des Amaryllidacées.

@@ -3,11 +3,11 @@ export const indexMenuLinks = [{
         link: '/#a-propos',
         icon: 'user-tie',
     },
-    // {
-    //     name: 'Projets',
-    //     link: '/#projets',
-    //     icon: 'terminal',
-    // },
+    {
+        name: 'Légumes',
+        link: '/#legumes',
+        icon: 'terminal',
+    },
     {
         name: 'Blog',
         link: '/#blog',

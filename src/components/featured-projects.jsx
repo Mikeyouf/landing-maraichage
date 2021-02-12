@@ -71,7 +71,7 @@ const StyledArchiveContainer = styled.div`
   margin-top: 2.5rem;
 `;
 
-const FeaturedProjects = ({ featured }) => {
+const FeaturedProjects = ({ featured, location }) => {
   const featuredProjects = featured.map((project, index) => {
     const coverImage = project.frontmatter.cover_image ? project.frontmatter.cover_image.childImageSharp.fluid : null;
 
@@ -84,7 +84,7 @@ const FeaturedProjects = ({ featured }) => {
     return (
       <StyledFeaturedProject key={title + index}>
         <a
-          aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `featured project ${title}`}
+          aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `Nos légumes - ${title}`}
           href={demoLink ? demoLink : repoLink ? repoLink : '#'}
           target="_blank"
           rel="noopener"
@@ -119,12 +119,14 @@ const FeaturedProjects = ({ featured }) => {
   });
 
   return (
-    <StyledSection id="projets">
-      <StyledH1>Nos projets</StyledH1>
+    <StyledSection id="legumes">
+      <StyledH1>Nos légumes du moment</StyledH1>
       {featuredProjects}
-      <StyledArchiveContainer>
-        <TextLink label="View More Projects" link="/projects" />
-      </StyledArchiveContainer>
+      {location.pathname !== '/legumes' && (
+        <StyledArchiveContainer>
+          <TextLink label="Voir tous nos légumes" link="/legumes" />
+        </StyledArchiveContainer>
+      )}
     </StyledSection>
   );
 };

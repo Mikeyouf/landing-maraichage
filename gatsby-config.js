@@ -84,7 +84,7 @@ module.exports = {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `FDG - maraichage`,
-                short_name: `starter`,
+                short_name: `FDG`,
                 start_url: `/`,
                 background_color: `#F1B631`,
                 theme_color: `#F1B631`,

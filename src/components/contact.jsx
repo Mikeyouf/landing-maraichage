@@ -10,7 +10,9 @@ const StyledContactSection = styled(StyledSection)`
 `;
 const StyledContainer = styled.section`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  width: 320px;
+  justify-self: center;
 
   & > svg {
     font-size: 2rem;
@@ -42,21 +44,23 @@ const StyledSeparator = styled.div`
 const StyledContacts = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px;
   width: 100%;
   margin-top: 2rem;
+  align-items: start;
+  /* justify-items: center; */
 
   ${mq.gt.xs} {
     grid-template-columns: repeat(2, 1fr);
   }
   ${mq.gt.sm} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
 const Contact = ({ data }) => {
   const {
-    frontmatter: { phone, email, address },
+    frontmatter: { phone, email, address, horaire },
     html,
   } = data;
 
@@ -103,6 +107,15 @@ const Contact = ({ data }) => {
                 <a href="tel:+33648588276" style={{ color: '#ced8de', fontSize: '0.75rem', fontWeight: '500' }}>
                   <span>{phone}</span>
                 </a>
+              </StyledFormContainer>
+            </StyledContainer>
+          )}
+          {horaire && (
+            <StyledContainer>
+              <Icon icon="clock" />
+              <StyledFormContainer>
+                <StyledForm>Horaire</StyledForm>
+                <span>{horaire}</span>
               </StyledFormContainer>
             </StyledContainer>
           )}

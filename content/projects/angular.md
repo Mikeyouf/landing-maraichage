@@ -1,10 +1,10 @@
 ---
 featured: false
 date: '2010-03-19'
-title: 'Angular'
-repo_link: 'https://github.com/angular/angular'
-demo_link: 'https://angular.io/'
-techs: ['Typescript', 'Angular', 'Ngrx', 'Rxjs', 'Material']
+title: 'Chou de Bruxelles'
+repo_link: ''
+demo_link: ''
+techs: ['Légumes', 'Hiver']
 ---
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+Le chou de Bruxelles est une variété de chou, plante herbacée de la famille des Brassicaceae, cultivée pour ses bourgeons axillaires qui forment de petites têtes pommées, consommées comme légume. Le terme désigne aussi ce légume. Ses cultivars sont issus de la variété Brassica oleracea L. var. gemmifera Zenker
