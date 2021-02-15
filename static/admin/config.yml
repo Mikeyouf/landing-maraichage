@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Mikeyouf/landing-maraichage
   branch: main
   commit_messages:

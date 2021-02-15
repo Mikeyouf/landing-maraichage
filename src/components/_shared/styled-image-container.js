@@ -4,9 +4,11 @@ export const StyledImageContainer = styled.div`
   min-width: 290px;
   min-height: 200px;
   position: relative;
+  max-height: 316px !important;
 
   & .gatsby-image-wrapper * {
     transition: transform var(--transition-fast) ease-in-out !important;
+    max-height: 316px !important;
   }
 
   &:hover .gatsby-image-wrapper * {
