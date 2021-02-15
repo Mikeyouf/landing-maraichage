@@ -1,7 +1,7 @@
 ---
 title: Chou de Bruxelles
 featured: false
-date: 2010-03-19
+date: 2021-02-15 10:23
 repo_link: ""
 demo_link: ""
 techs:
