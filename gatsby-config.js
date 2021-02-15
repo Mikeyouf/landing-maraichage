@@ -19,6 +19,13 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
+                path: `${__dirname}/static/assets/`,
+                name: `assets`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
             },
@@ -26,50 +33,43 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `assets`,
-                path: `${__dirname}/static/assets`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
                 name: 'projects',
-                path: `${__dirname}/content/projects`,
+                path: `${__dirname}/src/content/projects`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `markdown-pages`,
-                path: `${__dirname}/content/posts`,
+                path: `${__dirname}/src/content/posts`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'hero',
-                path: `${__dirname}/content/sections/hero`,
+                path: `${__dirname}/src/content/sections/hero`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'about',
-                path: `${__dirname}/content/sections/about`,
+                path: `${__dirname}/src/content/sections/about`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'cards',
-                path: `${__dirname}/content/sections/cards`,
+                path: `${__dirname}/src/content/sections/cards`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'contact',
-                path: `${__dirname}/content/sections/contact`,
+                path: `${__dirname}/src/content/sections/contact`,
             },
         },
         `gatsby-transformer-sharp`,
