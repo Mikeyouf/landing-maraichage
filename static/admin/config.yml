@@ -21,7 +21,7 @@ collections:
     label_singular: 'Post' # Used in the UI, ie: "New Post"
     description: >
       Crée tes articles ici
-    folder: 'content/posts'
+    folder: 'src/content/posts'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '{{title}} — {{year}}/{{month}}/{{day}}'
     create: true # Allow users to create new documents in this collection
@@ -54,7 +54,7 @@ collections:
     label_singular: 'Légume'
     description: >
       Ajoute ou supprime tes légumes ici
-    folder: 'content/projects'
+    folder: 'src/content/projects'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: '{{title}} — {{year}}/{{month}}/{{day}}'
     create: true
