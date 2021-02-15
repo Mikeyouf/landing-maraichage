@@ -12,7 +12,7 @@ backend:
 # Uncomment local_backend when you need to develop in your local
 #local_backend: true # run npx netlify-cms-proxy-server for local testing
 
-media_folder: 'content/projects/images'
+media_folder: 'static/assets'
 public_folder: '/assets'
 
 collections:
