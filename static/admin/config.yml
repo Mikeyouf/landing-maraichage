@@ -12,7 +12,7 @@ backend:
 # Uncomment local_backend when you need to develop in your local
 #local_backend: true # run npx netlify-cms-proxy-server for local testing
 
-media_folder: 'static/assets'
+media_folder: 'content/projects/images'
 public_folder: '/assets'
 
 collections:
@@ -70,5 +70,5 @@ collections:
           timeFormat: 'HH:mm',
           format: 'YYYY-MM-DD HH:mm',
         }
-      - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false, tagname: '' }
+      - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false }
       - { label: 'Article', name: 'body', widget: 'markdown', hint: 'La description du légume se trouve ici.' }

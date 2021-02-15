@@ -86,7 +86,7 @@ const FeaturedProjects = ({ featured, location }) => {
         <a
           aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `Nos légumes - ${title}`}
           href={demoLink ? demoLink : repoLink ? repoLink : '#'}
-          target="_blank"
+          // target="_blank"
           rel="noopener"
         >
           {coverImage && (
@@ -96,19 +96,19 @@ const FeaturedProjects = ({ featured, location }) => {
           )}
         </a>
         <StyledProjectInfoContainer>
-          <StyledContentLink href={demoLink ? demoLink : repoLink ? repoLink : '#'} target="_blank" rel="noopener">
+          <StyledContentLink href={demoLink ? demoLink : repoLink ? repoLink : '#'} rel="noopener">
             <StyledH2>{title}</StyledH2>
           </StyledContentLink>
           <StyledDescription dangerouslySetInnerHTML={{ __html: project.html }} />
           <TechList techs={project.frontmatter.techs} />
           <StyledLinkContainer>
-            {repoLink && (
+            {/* {repoLink && (
               <a href={repoLink} target="_blank" rel="noopener" title="Repository Link" aria-label={repoLinkLabel}>
                 <Icon icon="github" prefix="fab" />
               </a>
-            )}
+            )} */}
             {demoLink && (
-              <a href={demoLink} target="_blank" rel="noopener" title="Demo Link" aria-label={demoLinkLabel}>
+              <a href={demoLink} rel="noopener" title="Demo Link" aria-label={demoLinkLabel}>
                 <Icon icon="external-link-alt" />
               </a>
             )}
