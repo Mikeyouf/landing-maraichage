@@ -74,7 +74,7 @@ const TagsPage = ({
         <StyledSeparator />
         {tagCount && elems}
         <StyledSeparator />
-        <TextLink label="Take me home" link="/" />
+        <TextLink label="Retour à l'accueil" link="/" />
       </StyledFullHeightSection>
     </Layout>
   );
@@ -102,7 +102,7 @@ export default TagsPage;
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/posts/" }, frontmatter: { published: { eq: true } } }
+      filter: { fileAbsolutePath: { regex: "src/content/posts/" }, frontmatter: { published: { eq: true } } }
     ) {
       group(field: frontmatter___tags) {
         fieldValue

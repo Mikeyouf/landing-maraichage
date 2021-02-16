@@ -78,7 +78,7 @@ export const pageQuery = graphql`
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fileAbsolutePath: { regex: "/content/posts/" }
+        fileAbsolutePath: { regex: "src/content/posts/" }
         frontmatter: { published: { eq: true }, tags: { in: [$tag] } }
       }
     ) {
