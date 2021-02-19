@@ -1,6 +1,13 @@
 ---
 title: Notre maraichage est un atelier d'aide et de soutien par le travail.
-techs: [Légumes, Naturel, Respect, Bien-être, Santé, Ecologie]
+techs:
+  - Légumes
+  - Naturel
+  - Respect
+  - Bien-être
+  - Santé
+  - Ecologie
+  - Fruits
 aboutimage: ./terrasse-1.jpg
 ---
 
