@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Informations de contact
 phone: "0648588276"
 email: fermedugapeau.maraichage@avath.fr
 address: D258 Le Petit Beaulieu, 83210 Solliès-Pont
