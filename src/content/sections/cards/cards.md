@@ -15,7 +15,7 @@ cards:
   - label: Respect
     icon: hands-helping
     prefix: fas
-    description: Des autres et de notre éco-système.
+    description: Des autres et de notre éco-système pour évoluer en harmonie
   - label: Entraide
     icon: people-carry
     prefix: fas
@@ -23,7 +23,8 @@ cards:
   - label: Responsable
     icon: hand-holding-heart
     prefix: fas
-    description: Démarche de production locale sans pesticide, toujours dans le respect de la nature.
+    description: Démarche de production locale sans pesticide, toujours dans le
+      respect de la nature.
 ---
 
 Travailler la terre de manière naturelle a tout de suite été une évidence pour nous. Nos ouvriers sont sensible à cette démarche et ils travaillent dans le respect de notre écosystème, afin de produire de beaux légumes naturels gorgé de vitamines et d'énergie!
