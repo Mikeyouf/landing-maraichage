@@ -17,7 +17,7 @@ public_folder: '/assets'
 
 collections:
   - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Posts' # Used in the UI
+    label: 'Articles de blog' # Used in the UI
     label_singular: 'Post' # Used in the UI, ie: "New Post"
     description: >
       Crée tes articles ici
@@ -129,3 +129,18 @@ collections:
               { label: 'Description', name: 'description', widget: 'text' },
             ],
         }
+
+  - name: 'accueil'
+    label: 'Texte d accueil'
+    label_singular: 'Accueil' # Used in the UI, ie: "New Post"
+    description: >
+      Modifier le texte d accueil ici
+    folder: 'src/content/sections/hero'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: 'Cliquer ici pour modifier le texte d accueil'
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Titre', name: 'introduction', widget: 'string' }
+      - { label: 'Sous-titre', name: 'tagline', widget: 'string' }
+      - { label: 'Texte du bouton', name: 'cta_label', widget: 'string' }
+      - { label: 'Citation', name: 'body', widget: 'markdown', hint: 'Mettre une citation ici.' }
