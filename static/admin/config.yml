@@ -91,6 +91,7 @@ collections:
       - { label: 'Email', name: 'email', widget: 'string' }
       - { label: 'Adresse', name: 'address', widget: 'string' }
       - { label: 'Horaire', name: 'horaire', widget: 'string' }
+      - { label: 'Infos', name: 'body', widget: 'markdown', hint: "Texte avec lien vers le site de l'avath" }
 
   - name: 'about'
     label: 'Histoire'
