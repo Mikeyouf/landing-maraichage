@@ -74,3 +74,36 @@ collections:
         }
       - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false }
       - { label: 'Article', name: 'body', widget: 'markdown', hint: 'La description du légume se trouve ici.' }
+
+  - name: 'contact'
+    label: 'Contact'
+    label_singular: 'Contact' # Used in the UI, ie: "New Post"
+    description: >
+      Modifier les informations de contact ici
+    folder: 'src/content/sections/contact'
+    media_folder: static/assets
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Téléphone', name: 'phone', widget: 'string' }
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Adresse', name: 'address', widget: 'string' }
+      - { label: 'Horaire', name: 'horaire', widget: 'string' }
+
+  - name: 'about'
+    label: 'Histoire'
+    label_singular: 'Histoire' # Used in the UI, ie: "New Post"
+    description: >
+      Modifier notre histoire ici
+    folder: 'src/content/sections/about'
+    media_folder: ''
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Tags', name: 'techs', widget: 'list' }
+      - { label: 'Image de présentation', name: 'aboutimage', widget: 'image' }
+      - { label: 'Présentation', name: 'body', widget: 'markdown', hint: 'Décrire notre histoire ici.' }
