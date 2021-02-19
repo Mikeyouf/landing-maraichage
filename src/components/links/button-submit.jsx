@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from '../icon';
 import { flexCenter } from './../_shared/styled-mixins';
 
-export const StyledButtonLink = styled.a`
+export const StyledButtonLink = styled.button`
   ${flexCenter};
   text-decoration: none;
   color: var(--title-color) !important;
@@ -15,6 +15,7 @@ export const StyledButtonLink = styled.a`
   border: none;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+  max-height: 40px;
 
   &:hover {
     color: var(--primary-color) !important;
@@ -50,13 +51,13 @@ export const StyledButtonLink = styled.a`
   }
 `;
 
-const ButtonLink = ({ label, link }) => {
+const ButtonLink = ({ label, type }) => {
   return (
     <React.Fragment>
-      {label && link && (
-        <StyledButtonLink href={link ? link : '#'} target="_blank" rel="noopener">
+      {label && (
+        <StyledButtonLink type={type}>
           {label}
-          <Icon icon="arrow-down" />
+          <Icon icon="arrow-right" />
         </StyledButtonLink>
       )}
     </React.Fragment>
