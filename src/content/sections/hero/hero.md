@@ -1,6 +1,6 @@
 ---
 introduction: Bienvenue à
-tagline: Cultiver la terre est une passion que l'on vit au quotidien
+tagline: Cultiver la terre et les Hommes est une passion que l'on vit au quotidien
 cta_label: En savoir plus
 cta_link: /#a-propos
 ---
