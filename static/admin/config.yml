@@ -62,8 +62,8 @@ collections:
     create: true
     fields:
       - { label: 'Titre', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Tags', name: 'techs', widget: 'list' }
-      - { label: 'Publier', name: 'featured', widget: 'boolean' }
+      - { label: 'Tags', name: 'techs', widget: 'list', hint: 'ex: légumes, hiver, janvier, février' }
+      - { label: 'Publier', name: 'featured', widget: 'boolean', hint: 'publier si le légume est de saison' }
       - {
           label: 'Date de publication',
           name: 'date',
@@ -73,7 +73,13 @@ collections:
           format: 'YYYY-MM-DD HH:mm',
         }
       - { label: 'Image de présentation', name: 'cover_image', widget: 'image', required: false }
-      - { label: 'Article', name: 'body', widget: 'markdown', hint: 'La description du légume se trouve ici.' }
+      - {
+          label: 'Article',
+          name: 'body',
+          widget: 'markdown',
+          hint: 'La description du légume se trouve ici.',
+          required: false,
+        }
 
   - name: 'contact'
     label: 'Contact'
