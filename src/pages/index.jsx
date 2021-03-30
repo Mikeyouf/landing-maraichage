@@ -12,6 +12,7 @@ import RecentPosts from '../components/recent-posts';
 import SEO from '../components/seo';
 import { indexMenuLinks } from '../components/_config/menu-links';
 import BgImage from '../components/BgImage';
+import ContactSection from '../components/contactSection';
 
 const Index = ({ data, location }) => {
   const heroData = {
@@ -31,6 +32,7 @@ const Index = ({ data, location }) => {
       <BgImage title="maraichage" fluid={data.maraichage.childImageSharp.fluid} overlayColor="#04040454">
         <Hero data={heroData} />
       </BgImage>
+      <ContactSection />
       <Facts />
       <About data={data.about} />{' '}
       <CardGrid cards={data.cards.frontmatter.cards} description={data.cards.html} title="Nos valeurs" id="features" />

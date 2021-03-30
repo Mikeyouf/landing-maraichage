@@ -5,7 +5,6 @@ import ButtonLink from './links/button-link';
 import ScrollIndicator from './scroll-indicator';
 import { mq } from './_shared/media';
 import { StyledSection } from './_shared/styled-section';
-// import Maraichage from '../images/maraichage.jpg';
 
 const StyledHeroSection = styled(StyledSection)`
   min-height: calc(100vh * var(--header-height));
