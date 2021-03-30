@@ -25,6 +25,7 @@ const FakeBgImage = styled(Img)`
 
   @media screen and (max-width: 600px) {
     height: ${({ mobileHeight }) => mobileHeight};
+    min-height: 80vh;
   }
 `;
 

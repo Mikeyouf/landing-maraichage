@@ -7,7 +7,7 @@ import { mq } from './_shared/media';
 import { StyledSection } from './_shared/styled-section';
 
 const StyledHeroSection = styled(StyledSection)`
-  min-height: calc(100vh * var(--header-height));
+  min-height: calc(80vh - var(--header-height));
   position: relative;
   text-align: center;
 
