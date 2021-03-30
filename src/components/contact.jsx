@@ -5,6 +5,7 @@ import { mq } from './_shared/media';
 import { StyledH1 } from './_shared/styled-headings';
 import { StyledSection } from './_shared/styled-section';
 import ButtonSubmit from './links/button-submit';
+import NameForm from './form';
 
 const StyledContactSection = styled(StyledSection)`
   margin-bottom: 70px;
@@ -59,55 +60,55 @@ const StyledContacts = styled.div`
   }
 `;
 
-const FormSubmit = styled.form`
-  display: flex;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  width: 100%;
-  height: 50px;
-  justify-content: center;
-  flex-direction: column;
+// const FormSubmit = styled.form`
+//   display: flex;
+//   margin-bottom: 2rem;
+//   margin-top: 2rem;
+//   width: 100%;
+//   height: 50px;
+//   justify-content: center;
+//   flex-direction: column;
 
-  & > label {
-    text-align: center;
-  }
+//   & > label {
+//     text-align: center;
+//   }
 
-  ${mq.gt.xs} {
-    flex-direction: row;
-    width: 80%;
-    margin-top: 0;
-  }
-`;
+//   ${mq.gt.xs} {
+//     flex-direction: row;
+//     width: 80%;
+//     margin-top: 0;
+//   }
+// `;
 
-const InputEmail = styled.input`
-  min-width: 100%;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.6);
-  margin-right: 1rem;
-  color: var(--title-color) !important;
-  font-size: 0.9rem;
-  font-weight: 500;
-  white-space: nowrap;
-  position: relative;
-  border: none;
-  padding: 0.4rem 0.8rem;
+// const InputEmail = styled.input`
+//   min-width: 100%;
+//   height: 40px;
+//   background-color: rgba(255, 255, 255, 0.6);
+//   margin-right: 1rem;
+//   color: var(--title-color) !important;
+//   font-size: 0.9rem;
+//   font-weight: 500;
+//   white-space: nowrap;
+//   position: relative;
+//   border: none;
+//   padding: 0.4rem 0.8rem;
 
-  ${mq.gt.xs} {
-    min-width: 300px;
-  }
+//   ${mq.gt.xs} {
+//     min-width: 300px;
+//   }
 
-  &:after {
-    content: '';
-    z-index: -1;
-    border: 1px solid var(--title-color);
-    position: absolute;
-    bottom: -3px;
-    right: -3px;
-    width: 100%;
-    height: 100%;
-    transition: all ease var(--transition-fast);
-  }
-`;
+//   &:after {
+//     content: '';
+//     z-index: -1;
+//     border: 1px solid var(--title-color);
+//     position: absolute;
+//     bottom: -3px;
+//     right: -3px;
+//     width: 100%;
+//     height: 100%;
+//     transition: all ease var(--transition-fast);
+//   }
+// `;
 
 const Contact = ({ data }) => {
   const {
@@ -120,13 +121,14 @@ const Contact = ({ data }) => {
       <StyledContactSection id="contact">
         <StyledH1>Restons en contact</StyledH1>
         <StyledTextSection dangerouslySetInnerHTML={{ __html: html }} />
-        <FormSubmit name="contact" method="POST" data-netlify="true">
+        <NameForm nameForm="contact" />
+        {/* <FormSubmit name="contact" method="POST" data-netlify="true" action="/remerciement">
           <label>
             Votre e-mail: <InputEmail type="email" name="email" placeholder="votre e-mail ici" />
           </label>
           <input type="hidden" name="form-name" value="contact" />
           <ButtonSubmit type="submit" label="Envoyer" />
-        </FormSubmit>
+        </FormSubmit> */}
         <StyledSeparator />
         <StyledContacts>
           {address && (

@@ -3,6 +3,7 @@ import React from 'react';
 import { mq } from './_shared/media';
 import { StyledSection } from './_shared/styled-section';
 import ButtonSubmit from './links/button-submit';
+import NameForm from './form';
 
 const StyledHeroSection = styled(StyledSection)`
   min-height: calc(40vh * var(--header-height));
@@ -96,13 +97,14 @@ const ContactSection = () => {
       <StyledDescription>
         Nous ne partagerons pas vos informations avec d'autres personnes ou entreprises.
       </StyledDescription>
-      <FormSubmit name="contact-un" method="POST" data-netlify="true">
+      <NameForm nameForm="contact-un" />
+      {/* <FormSubmit name="contact-un" method="POST" data-netlify="true" action="/remerciement">
         <label>
           Votre e-mail: <InputEmail type="email" name="email" placeholder="votre e-mail ici" />
         </label>
         <input type="hidden" name="form-name" value="contact-un" />
         <ButtonSubmit type="submit" label="Envoyer" />
-      </FormSubmit>
+      </FormSubmit> */}
     </StyledHeroSection>
   );
 };
