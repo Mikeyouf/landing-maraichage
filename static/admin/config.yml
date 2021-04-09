@@ -2,7 +2,6 @@ backend:
   name: git-gateway
   repo: Mikeyouf/landing-maraichage
   branch: main
-  locale: 'fr'
   commit_messages:
     create: 'Creation de {{collection}} “{{slug}}”'
     update: 'Mise à jour de {{collection}} “{{slug}}”'
@@ -12,6 +11,8 @@ backend:
 
 # Uncomment local_backend when you need to develop in your local
 #local_backend: true # run npx netlify-cms-proxy-server for local testing
+publish_mode: editorial_workflow
+locale: 'fr'
 
 media_folder: 'static/assets'
 public_folder: '/assets'
