@@ -28,7 +28,8 @@ const InputEmail = styled.input`
   min-width: 100%;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 0 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
   color: var(--title-color) !important;
   font-size: 0.9rem;
   font-weight: 500;
@@ -39,6 +40,7 @@ const InputEmail = styled.input`
 
   ${mq.gt.xs} {
     min-width: 300px;
+    margin: 0 1rem;
   }
 
   &:after {
@@ -92,7 +94,7 @@ const NameForm = ({ nameForm }) => {
     <FormSubmit data-netlify="true" action="/" name={nameForm} method="post" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value={nameForm} />
       <label>
-        Votre e-mail:
+        Votre email:
         <InputEmail name="email" placeholder="votre e-mail ici" type="text" onChange={handleChange} />
       </label>
       <ButtonSubmit type="submit" label="Envoyer" />
