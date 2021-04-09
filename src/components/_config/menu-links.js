@@ -6,7 +6,7 @@ export const indexMenuLinks = [{
     {
         name: 'Légumes',
         link: '/#legumes',
-        icon: 'seedling',
+        icon: 'carrot',
     },
     {
         name: 'Blog',

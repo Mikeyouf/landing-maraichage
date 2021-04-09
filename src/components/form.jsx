@@ -28,7 +28,7 @@ const InputEmail = styled.input`
   min-width: 100%;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin-right: 1rem;
+  margin: 0 1rem;
   color: var(--title-color) !important;
   font-size: 0.9rem;
   font-weight: 500;
