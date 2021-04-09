@@ -158,7 +158,7 @@ export const query = graphql`
 
     maraichage: file(relativePath: { eq: "maraichage.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
