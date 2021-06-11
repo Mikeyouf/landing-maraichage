@@ -152,4 +152,5 @@ collections:
       - { label: 'Titre', name: 'introduction', widget: 'string' }
       - { label: 'Sous-titre', name: 'tagline', widget: 'string' }
       - { label: 'Texte du bouton', name: 'cta_label', widget: 'string' }
+      - { label: 'image de fond', name: 'backgroundImage', widget: 'image' }
       - { label: 'Citation', name: 'body', widget: 'markdown', hint: 'Mettre une citation ici.' }

@@ -1,12 +1,12 @@
 export const socialIconList = [{
         name: 'facebook',
         prefix: 'fab', // fab prefix for brands, fas for solid icons
-        link: 'https://www.facebook.com/Restaurant-La-ferme-du-Gapeau-Avath-1887997874559692/',
+        link: 'https://www.facebook.com/Mara%C3%AEchage-ESAT-La-ferme-du-Gapeau-Avath-108989971395261',
     },
     {
         name: 'instagram',
         prefix: 'fab',
-        link: 'https://github.com/knochenmark/gatsby-starter-level-2',
+        link: 'https://www.instagram.com/maraichagegapeau/',
     },
     {
         name: 'user-lock',

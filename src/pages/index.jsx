@@ -22,14 +22,15 @@ const Index = ({ data, location }) => {
     introduction: data.hero.frontmatter.introduction,
     ctaLabel: data.hero.frontmatter.cta_label,
     ctaLink: data.hero.frontmatter.cta_link,
+    backgroundImage: data.hero.frontmatter.backgroundImage.childImageSharp,
   };
 
-  // console.log(data.about);
+  // console.log(heroData.backgroundImage.fluid);
 
   return (
     <Layout menuLinks={indexMenuLinks}>
       <SEO title="Accueil" />
-      <BgImage title="maraichage" fluid={data.maraichage.childImageSharp.fluid} overlayColor="#04040454">
+      <BgImage title="maraichage" fluid={heroData.backgroundImage.fluid} overlayColor="#04040454" height="90vh">
         <Hero data={heroData} />
       </BgImage>
       <ContactSection />
@@ -63,6 +64,13 @@ export const query = graphql`
         tagline
         cta_label
         cta_link
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }
