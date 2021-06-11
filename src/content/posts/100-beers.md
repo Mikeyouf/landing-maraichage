@@ -8,7 +8,7 @@ tags:
   - naturel
 published: true
 slug: /culture-lasagne
-date: 2021-06-02 10:02
+date: 2021-06-11 08:29
 description: Au maraîchage de La Ferme du Gapeau, une partie de nos champs ont
   été transformé en "lasagnes". Un type de culture sur butte qui donne de très
   bons résultats.
