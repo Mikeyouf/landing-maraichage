@@ -145,6 +145,7 @@ collections:
     description: >
       Modifier le texte d accueil ici
     folder: 'src/content/sections/hero'
+    media_folder: ''
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     summary: 'Cliquer ici pour modifier le texte d accueil'
     create: false # Allow users to create new documents in this collection
